@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-navy-950 text-navy-100 font-sans;
+    min-height: 100vh;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent-400 ring-offset-2 ring-offset-navy-950;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-600;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-navy-900/60 backdrop-blur-md border border-navy-700/50;
+  }
+
+  .glass-card {
+    @apply bg-navy-900/60 backdrop-blur-md border border-navy-700/50 rounded-2xl;
+  }
+
+  .glass-panel {
+    @apply bg-navy-900/80 backdrop-blur-lg border border-navy-700/50;
+  }
+}
